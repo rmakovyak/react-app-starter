@@ -1,5 +1,4 @@
-import fs from 'fs-extra';
-
+const fs = require('fs-extra');
 const webpack = require('webpack');
 const config = require('./config/webpack.config.prod');
 const paths = require('./config/paths');
