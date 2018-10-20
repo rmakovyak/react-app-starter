@@ -1,8 +1,9 @@
-const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const paths = require('./paths');
 
 module.exports = {
-  entry: './src/index.js',
-  mode: 'development',
+  entry: paths.appIndexJs,
+  mode: 'production',
   target: 'web',
   module: {
     rules: [
@@ -20,7 +21,13 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: paths.appBuild,
     filename: '[name].[hash].js',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: paths.appHtml,
+    }),
+  ],
 };
