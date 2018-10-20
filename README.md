@@ -2,7 +2,8 @@
 
 One Paragraph of project description goes here
 
-TODO: styles
+TODO: styles ? scss
+TODO: postcss
 TODO: fonts
 TODO: redux
 TODO: tests
