@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('./paths');
 
@@ -24,5 +25,11 @@ module.exports = {
     path: paths.appBuild,
     filename: '[name].[hash].js',
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: paths.appHtml,
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 };
