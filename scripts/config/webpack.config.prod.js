@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
+const postCssFlexboxFixes = require('postcss-flexbugs-fixes');
 const paths = require('./paths');
 
 module.exports = {
@@ -27,7 +29,25 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: { modules: true },
+            options: { modules: true, importLoaders: 1 },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                postCssFlexboxFixes,
+                autoprefixer({
+                  browsers: [
+                    '>1%',
+                    'last 4 versions',
+                    'Firefox ESR',
+                    'not ie < 9', // React doesn't support IE8 anyway
+                  ],
+                  flexbox: 'no-2009',
+                }),
+              ],
+            },
           },
         ],
       },

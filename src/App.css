@@ -7,3 +7,7 @@
   color: green;
   font-family: RobotoMono;
 }
+
+::placeholder {
+  color: gray;
+}
