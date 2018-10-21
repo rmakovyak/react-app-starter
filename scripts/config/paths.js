@@ -12,4 +12,5 @@ module.exports = {
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appConfig: resolveApp('scripts/config'),
+  appStyleguide: resolveApp('src/styleguide'),
 };

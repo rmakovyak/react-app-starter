@@ -5,6 +5,9 @@ One Paragraph of project description goes here
 TODO: styles ? scss
 TODO: redux
 TODO: tests
+TODO: components library
+
+How to do styles?
 
 ## Getting Started
 

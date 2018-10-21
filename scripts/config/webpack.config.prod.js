@@ -8,6 +8,11 @@ module.exports = {
   entry: paths.appIndexJs,
   mode: 'production',
   target: 'web',
+  resolve: {
+    alias: {
+      styleguide: paths.appStyleguide,
+    },
+  },
   module: {
     rules: [
       {
