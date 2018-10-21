@@ -7,7 +7,20 @@ TODO: redux
 TODO: tests
 TODO: components library
 
-How to do styles?
+How to do styles? scss
+
+## How styling works
+
+Styling for this project is built on setup of CSS modules with SCSS.
+There is a styleguide folder that contains all general styling rules and variables.
+
+Styleguide folder structure contains `partials`, `modules` and `variables` folders.
+
+Here is simple explanation on how to use them:
+
+- Files from `partials` can be imported directly into js files and used in components directly.
+- Files from `variables` should be imported only into scss files to get access to variables and configurations (color, spacings, etc.)
+- Files from `modules` are global and automatically applied by import in `index.js`
 
 ## Getting Started
 

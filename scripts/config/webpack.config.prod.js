@@ -27,7 +27,7 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -54,6 +54,12 @@ module.exports = {
               ],
             },
           },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       {
@@ -75,7 +81,7 @@ module.exports = {
       template: paths.appHtml,
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].[hash].css',
       chunkFilename: '[id].css',
     }),
   ],

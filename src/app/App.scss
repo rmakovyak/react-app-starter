@@ -1,0 +1,9 @@
+@import 'styleguide/modules/color.scss';
+
+.App {
+  color: $boxColor;
+}
+
+::placeholder {
+  color: gray;
+}

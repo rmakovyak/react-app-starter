@@ -27,7 +27,7 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           'style-loader',
           {
@@ -50,6 +50,12 @@ module.exports = {
                   flexbox: 'no-2009',
                 }),
               ],
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
             },
           },
         ],
