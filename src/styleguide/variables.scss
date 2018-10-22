@@ -1,0 +1,29 @@
+$colors: (
+  grey-1: #434a64,
+  grey-2: #7e86a8,
+  grey-3: #a2a6bc,
+  grey-4: #d5d8e3,
+  grey-5: #eceef5,
+  grey-6: #fafbfc,
+  white-1: #ffffff,
+  purple-1: #8d60e6,
+  purple-2: #a870f0,
+  blue-1: #6aa7e6,
+  green-1: #00d3bf,
+  yellow-1: #f5bd69,
+  orange-1: #f59e69,
+  red-1: #f07072,
+);
+
+$gradients: (
+  main: linear-gradient(to left, #cb5eda, #3b18b6),
+);
+
+$spacings: (
+  xxs: 5px,
+  xs: 15px,
+  sm: 30px,
+  lg: 45px,
+  xl: 60px,
+  xxl: 120px,
+);
