@@ -1,0 +1,43 @@
+@import '~styleguide/variables.scss';
+
+.headerContainer {
+  height: 70px;
+  background: map-get($gradients, main);
+  color: map-get($colors, white-1);
+  align-items: center;
+  display: flex;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  flex: 1;
+  text-align: center;
+}
+
+.navigationLink {
+  padding: map-get($spacings, xs) map-get($spacings, sm);
+  color: map-get($colors, white-1);
+  position: relative;
+
+  &:hover {
+    color: map-get($colors, white-1);
+    text-decoration: none;
+  }
+
+  &:after {
+    content: '';
+    border-right: 1px solid map-get($colors, purple-2);
+    height: map-get($spacings, xs);
+    position: absolute;
+    right: 0;
+    top: map-get($spacings, xs);
+  }
+
+  &:last-child:after {
+    border: none;
+  }
+}

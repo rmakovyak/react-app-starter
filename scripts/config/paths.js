@@ -13,4 +13,6 @@ module.exports = {
   appSrc: resolveApp('src'),
   appConfig: resolveApp('scripts/config'),
   appStyleguide: resolveApp('src/styleguide'),
+  appAssets: resolveApp('src/assets'),
+  bootstrap: resolveApp('node_modules/bootstrap'),
 };

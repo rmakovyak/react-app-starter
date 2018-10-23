@@ -8,6 +8,6 @@
   "rules": {
     "react/jsx-filename-extension": 0,
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "import/no-unresolved": [2, { "ignore": [".css$"] }]
+    "import/no-unresolved": [2, { "ignore": [".scss$", ".svg$"] }]
   }
 }

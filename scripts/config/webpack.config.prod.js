@@ -11,6 +11,8 @@ module.exports = {
   resolve: {
     alias: {
       styleguide: paths.appStyleguide,
+      bootstrap: paths.bootstrap,
+      assets: paths.appAssets,
     },
   },
   module: {
@@ -34,7 +36,11 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: { modules: true, importLoaders: 1 },
+            options: {
+              modules: true,
+              importLoaders: 1,
+              camelCase: 'dashesOnly',
+            },
           },
           {
             loader: 'postcss-loader',
